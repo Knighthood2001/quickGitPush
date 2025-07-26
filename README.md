@@ -57,3 +57,22 @@ To https://github.com/Knighthood2001/quickGitPush.git
 如果你是使用gp3.sh
 
 
+```bash
+wu@wu:~/code/quickGitPush$ gp
+🚀 开始 Git 快速提交推送流程...
+▶ 执行: git add .
+▶ 执行: git commit -m "Update at 2025-07-26 17:54:53"
+[main ae73ddf] Update at 2025-07-26 17:54:53
+ 1 file changed, 1 insertion(+)
+▶ 执行: git push
+枚举对象中: 5, 完成.
+对象计数中: 100% (5/5), 完成.
+使用 16 个线程进行压缩
+压缩对象中: 100% (3/3), 完成.
+写入对象中: 100% (3/3), 363 字节 | 363.00 KiB/s, 完成.
+总共 3 （差异 1），复用 0 （差异 0）
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Knighthood2001/quickGitPush.git
+   5d98ce7..ae73ddf  main -> main
+🎉 所有操作成功完成！
+```
