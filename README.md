@@ -51,7 +51,8 @@ wu@wu:~/code/quickGitPush$ gp "添加gp2.sh"
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Knighthood2001/quickGitPush.git
    f17c7c0..46f9e93  main -> main
-🎉 所有操作成功完成！```
+🎉 所有操作成功完成！
+```
 
 如果你是使用gp3.sh
 
