@@ -11,7 +11,9 @@ gp() {
     git push
 }
 ```
+
 结果如下
+
 ```shell
 wu@wu:~/code/pythonDemo/​​AutoBabelDocTranslator​​$ gp "update README.md"
 [main 2586c80] update README.md
@@ -25,4 +27,5 @@ wu@wu:~/code/pythonDemo/​​AutoBabelDocTranslator​​$ gp "update README.md
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/Knighthood2001/AutoBabelDocTranslator.git
    a996a52..2586c80  main -> main
-```# quickGitPush
+```
+
