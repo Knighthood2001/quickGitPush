@@ -50,7 +50,7 @@ gp() {
     
     # 3. git push
     echo -e "${GREEN}▶ 推送变更: git push origin ${branch}${NC}"
-    git push origin "${branch}"
+    git push origin $branch
     local push_status=$?
     
     if [ $push_status -eq 0 ]; then
