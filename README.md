@@ -1,78 +1,82 @@
 
-```bash
-# Git 快速提交推送函数 git push简称为gp
-gp() {
-    git add .
-    if [ -z "$1" ]; then
-        git commit -m "Update at $(date '+%Y-%m-%d %H:%M:%S')"
-    else
-        git commit -m "$1"
-    fi
-    git push
-}
-```
+# Git 快速提交推送工具
 
-结果如下
+这是一个简化 Git 提交和推送流程的脚本集合，适用于日常开发中快速提交代码变更。
+
+## 项目目标
+- 简化 Git 提交流程，减少重复输入命令的时间（实现三合一：add、commit、push）。
+- 通过颜色和状态提示提升用户体验。
+
+## 如何安装
 
 ```shell
-wu@wu:~/code/pythonDemo/​​AutoBabelDocTranslator​​$ gp "update README.md"
-[main 2586c80] update README.md
- 1 file changed, 2 insertions(+)
-枚举对象中: 5, 完成.
-对象计数中: 100% (5/5), 完成.
-使用 16 个线程进行压缩
-压缩对象中: 100% (3/3), 完成.
-写入对象中: 100% (3/3), 388 字节 | 388.00 KiB/s, 完成.
-总共 3 （差异 2），复用 0 （差异 0）
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/Knighthood2001/AutoBabelDocTranslator.git
-   a996a52..2586c80  main -> main
+git clone git@github.com:Knighthood2001/quickGitPush.git
+cd quickGitPush
+sh install.sh
+```
+**然后你就可以将这个项目删除了，因为内容已经被拷贝到你的`~/.bashrc`中了。**
+
+## 如何使用
+
+首先就是你有远程分支，并且你已经配置好了远程仓库。然后你更改了本地代码，想要同步到远程分支。
+
+一般的流程是这样的：
+```shell
+git add .
+git commit -m "提交信息"
+git push
 ```
 
-如果你是使用gp2.sh
+使用这个项目，你可以简化这个过程。只需要输入一行命令。
 
-结果如下
-```bash
-wu@wu:~/code/quickGitPush$ gp "添加gp2.sh"
-🚀 开始 Git 快速提交推送流程...
-▶ 执行: git add .
-▶ 执行: git commit -m "添加gp2.sh"
-[main 46f9e93] 添加gp2.sh
- 3 files changed, 56 insertions(+), 1 deletion(-)
- create mode 100644 gp.sh
- create mode 100644 gp2.sh
-▶ 执行: git push
-枚举对象中: 7, 完成.
-对象计数中: 100% (7/7), 完成.
-使用 16 个线程进行压缩
-压缩对象中: 100% (5/5), 完成.
-写入对象中: 100% (5/5), 984 字节 | 984.00 KiB/s, 完成.
-总共 5 （差异 1），复用 0 （差异 0）
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/Knighthood2001/quickGitPush.git
-   f17c7c0..46f9e93  main -> main
-🎉 所有操作成功完成！
-```
+> **我选用gp，是因为这是git push的缩写。**
 
-如果你是使用gp3.sh
-
+你可以选择两种方式使用：
+1. 自定义commit message
 
 ```bash
-wu@wu:~/code/quickGitPush$ gp
-🚀 开始 Git 快速提交推送流程...
-▶ 执行: git add .
-▶ 执行: git commit -m "Update at 2025-07-26 17:54:53"
-[main ae73ddf] Update at 2025-07-26 17:54:53
- 1 file changed, 1 insertion(+)
-▶ 执行: git push
-枚举对象中: 5, 完成.
-对象计数中: 100% (5/5), 完成.
-使用 16 个线程进行压缩
-压缩对象中: 100% (3/3), 完成.
-写入对象中: 100% (3/3), 363 字节 | 363.00 KiB/s, 完成.
-总共 3 （差异 1），复用 0 （差异 0）
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/Knighthood2001/quickGitPush.git
-   5d98ce7..ae73ddf  main -> main
-🎉 所有操作成功完成！
+gp "提交信息"
 ```
+
+> 这里的"提交信息"换成你想提交的信息即可。
+
+2. 使用默认时间戳
+
+```bash
+gp
+```
+
+此时commit的时候，就会使用当前时间戳作为commit message。
+
+输出示例：
+
+
+## 文件说明
+
+1. **`gp.sh`**
+   - 基础版本：提供最简单的 `git add`、`git commit` 和 `git push` 功能。
+   - 使用方法：`gp "提交信息"`（如果未提供提交信息，则使用默认时间戳）。
+
+2. **`gp2.sh`**
+   - 增强版本：增加颜色标记和状态提示，提升用户体验。
+   - 功能：
+     - 显示当前分支。
+     - 自动检测是否为 Git 仓库。
+     - 提供更友好的输出格式。
+   - 结果如下：
+
+      ![gp2](imgs/gp2.png)
+
+3. **`gp3.sh`**
+   - 优化版本：修复了分支名称引用问题，确保 `git push` 正确推送当前分支。
+   - 改进点：
+     - 使用 `git branch --show-current` 获取分支名称。
+     - 修复了 `git push` 命令中分支变量的引用问题。
+   - 结果如下：
+
+      ![gp3](imgs/gp3.png)
+
+> **这里主要使用的是gp3.sh，因为其最优美，功能最完善**
+
+
+

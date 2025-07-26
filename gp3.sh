@@ -1,4 +1,3 @@
-# Git 快速提交推送函数 git push简称为gp
 gp() {
     # 颜色定义
     local RED='\033[0;31m'

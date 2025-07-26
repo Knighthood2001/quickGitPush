@@ -1,4 +1,3 @@
-# Git 快速提交推送函数 git push简称为gp
 gp() {
     git add .
     if [ -z "$1" ]; then
