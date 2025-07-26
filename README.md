@@ -57,7 +57,7 @@ gp
    - 基础版本：提供最简单的 `git add`、`git commit` 和 `git push` 功能。
    - 使用方法：`gp "提交信息"`（如果未提供提交信息，则使用默认时间戳）。
    - 结果如下：
-   
+
       ![gp](imgs/gp.png)
 2. **`gp2.sh`**
    - 增强版本：增加颜色标记和状态提示，提升用户体验。
@@ -81,5 +81,6 @@ gp
 
 > **这里主要使用的是gp3.sh，因为其最优美，功能最完善**
 
+然后你可以看看你的commit message
 
-
+![Alt text](imgs/image.png)
