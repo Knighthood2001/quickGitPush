@@ -52,7 +52,6 @@ gp
 
 此时commit的时候，就会使用当前时间戳作为commit message。
 
-输出示例：
 
 
 ## 文件说明
