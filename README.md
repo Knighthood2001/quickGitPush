@@ -93,3 +93,11 @@ gp
 windows下，你需要使用git bash，才可以使用。
 
 ![windows版本](imgs/windows.png)
+
+## 如何安装
+```shell
+git clone git@github.com:Knighthood2001/quickGitPush.git
+cd quickGitPush
+sh install-windows.sh
+```
+
