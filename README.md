@@ -89,7 +89,7 @@ gp
 ![Alt text](imgs/image.png)
 
 # windows版本
-windows下，你需要使用git bash，才可以使用。
+windows下，你需要使用`git bash`，才可以使用。
 
 ![windows版本](imgs/windows.png)
 
