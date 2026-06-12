@@ -16,7 +16,7 @@
 ## 如何安装
 
 ```shell
-git clone git@github.com:Knighthood2001/quickGitPush.git
+git clone https://github.com/Knighthood2001/quickGitPush.git
 cd quickGitPush
 sh install.sh
 ```
@@ -97,7 +97,7 @@ windows下，你需要使用`git bash`，才可以使用。
 
 ## 如何安装
 ```shell
-git clone git@github.com:Knighthood2001/quickGitPush.git
+git clone https://github.com/Knighthood2001/quickGitPush.git
 cd quickGitPush
 sh install-windows.sh
 ```
